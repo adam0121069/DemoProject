@@ -53,7 +53,12 @@ const isModalVisible = ref(false);
             <BellIcon class="h-6 w-6" aria-hidden="true" />
           </button>
 
-          <button @click="isModalVisible = true">Open Modal</button>
+          <button @click="isModalVisible = true" 
+          class="text-white bg-blue-500 hover:bg-blue-600 
+          focus:outline-none focus:ring-2 focus:ring-blue-500 
+          focus:ring-offset-2 px-4 py-2 rounded">
+            登入
+          </button>
 
           <!-- Profile dropdown -->
           <Menu as="div" class="relative ml-3">
@@ -63,7 +68,7 @@ const isModalVisible = ref(false);
                 <span class="absolute -inset-1.5" />
                 <span class="sr-only">Open user menu</span>
                 <img class="h-8 w-8 rounded-full"
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  src=""
                   alt="" />
               </MenuButton>
             </div>

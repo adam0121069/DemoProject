@@ -13,18 +13,7 @@ import FooterView from '@/components/Footer.vue';
   <n-modal-provider>
     <div class="flex flex-col min-h-screen">
       <HeaderView />
-
-      <LeftSide />
-
-      <div class="flex flex-1">
-
-
-        <main class="flex-grow bg-gray-100 p-4">
-          <p class="text-lg">Body Content</p>
-          <RouterView />
-        </main>
-      </div>
-
+      <RouterView />
       <FooterView class="bg-gray-800 text-white p-4 mt-auto" />
     </div>
   </n-modal-provider>
