@@ -1,106 +1,50 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
-
-import LoginView  from '@/components/Login.vue'
-
-const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-]
+import { ref } from 'vue'
+import LoginView from '@/components/Login.vue'
 
 const isModalVisible = ref(false);
 
+// 独立的打开模态框的方法
+const openModal = () => {
+    isModalVisible.value = true;
+}
 </script>
 
 <template>
-  <LoginView  v-model:showModal="isModalVisible"  />
+  <nav class="flex flex-wrap items-center justify-between p-3">
 
-  <Disclosure as="nav" class="bg-gray-800" v-slot="{ open }">
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-      <div class="relative flex h-16 items-center justify-between">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-          <!-- Mobile menu button-->
-          <DisclosureButton
-            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-            <span class="absolute -inset-0.5" />
-            <span class="sr-only">Open main menu</span>
-            <Bars3Icon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
-            <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" />
-          </DisclosureButton>
-        </div>
-        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-          <div class="flex flex-shrink-0 items-center">
-            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-              alt="Your Company" />
-          </div>
-          <div class="hidden sm:ml-6 sm:block">
-            <div class="flex space-x-4">
-              <a v-for="item in navigation" :key="item.name" :href="item.href"
-                :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium']"
-                :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
-            </div>
-          </div>
-        </div>
-        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          <button type="button"
-            class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-            <span class="absolute -inset-1.5" />
-            <span class="sr-only">View notifications</span>
-            <BellIcon class="h-6 w-6" aria-hidden="true" />
-          </button>
-
-          <button @click="isModalVisible = true" 
-          class="text-white bg-blue-500 hover:bg-blue-600 
-          focus:outline-none focus:ring-2 focus:ring-blue-500 
-          focus:ring-offset-2 px-4 py-2 rounded">
-            登入
-          </button>
-
-          <!-- Profile dropdown -->
-          <Menu as="div" class="relative ml-3">
-            <div>
-              <MenuButton
-                class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                <span class="absolute -inset-1.5" />
-                <span class="sr-only">Open user menu</span>
-                <img class="h-8 w-8 rounded-full"
-                  src=""
-                  alt="" />
-              </MenuButton>
-            </div>
-
-            <transition enter-active-class="transition ease-out duration-100"
-              enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100"
-              leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100"
-              leave-to-class="transform opacity-0 scale-95">
-              <MenuItems
-                class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                <MenuItem v-slot="{ active }">
-                <a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">Your
-                  Profile</a>
-                </MenuItem>
-                <MenuItem v-slot="{ active }">
-                <a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">Settings</a>
-                </MenuItem>
-                <MenuItem v-slot="{ active }">
-                <a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">Sign out</a>
-                </MenuItem>
-              </MenuItems>
-            </transition>
-          </Menu>
-        </div>
+    <div class="text-xl">Demo Website</div>
+    <div class="flex md:hidden">
+      <button id="hamburger">
+        <img class="toggle block" src="https://img.icons8.com/fluent-systems-regular/2x/menu-squared-2.png" width="40"
+          height="40" />
+        <img class="toggle hidden" src="https://img.icons8.com/fluent-systems-regular/2x/close-window.png" width="40"
+          height="40" />
+      </button>
     </div>
-  </div>
-
-  <DisclosurePanel class="sm:hidden">
-    <div class="space-y-1 px-2 pb-3 pt-2">
-      <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href"
-        :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block rounded-md px-3 py-2 text-base font-medium']"
-        :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
+    <div class="toggle hidden w-full md:w-auto md:flex text-right text-bold mt-5 md:mt-0 md:border-none">
+      <a href="#home" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Home</a>
+      <a href="#services" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">Services</a>
+      <a href="#aboutus" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none">About us</a>
+      <a href="#Login" class="block md:inline-block hover:text-blue-500 px-3 py-3 md:border-none" @click="openModal">Login</a>
     </div>
-  </DisclosurePanel>
-</Disclosure></template>
+
+    <div class="relative w-full h-[320px]" id="home">
+      <div class="absolute inset-0 opacity-60">
+        <img
+          src="https://images.pexels.com/photos/126271/pexels-photo-126271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="Background Image" class="object-cover object-center w-full h-full" />
+      </div>
+      <div class="absolute inset-9 flex flex-col md:flex-row items-center justify-between text-white">
+        <div class="md:w-1/2 mb-4 md:mb-0">
+          <h1 class="text-grey-700 font-medium text-4xl md:text-5xl leading-tight mb-2">Tailwind CSS</h1>
+          <p class="font-regular text-xl mb-8 mt-4"> vite + vue3</p>
+          <a href="#contactUs"
+            class="px-6 py-3 bg-[#c8a876] text-white font-medium rounded-full hover:bg-[#c09858] transition duration-200">Contact
+            Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <LoginView v-model:showModal="isModalVisible" />
+</template>

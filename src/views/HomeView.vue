@@ -3,59 +3,91 @@
 </script>
 
 <template>
-    <div class="relative overflow-hidden bg-white">
-      <div class="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
-        <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
-          <div class="sm:max-w-lg">
-            <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                Summer styles are finally here
-            </h1>
-            <p class="mt-4 text-xl text-gray-500">
-                This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care if you live or die.
-            </p>
+
+  <section class="">
+  <div class="container max-w-xl p-6 mx-auto space-y-12 lg:px-8 lg:max-w-7xl">
+    <div>
+      <h2 class="text-3xl font-bold text-center sm:text-5xl">New Features</h2>
+      <p class="max-w-3xl mx-auto mt-4 text-xl text-center ">Explore the latest features that enhance your learning experience and make it even more exciting.</p>
+    </div>
+    <div class="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+      <div>
+        <div class="mt-4 space-y-12">
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center w-12 h-12 rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-rocket">
+                  <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+                  </path>
+                  <path
+                    d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+                  </path>
+                  <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                  <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                </svg></div>
+            </div>
+            <div class="ml-4">
+              <h4 class="text-lg font-medium leadi ">Advanced Learning Algorithms</h4>
+              <p class="mt-2 ">Discover our improved learning algorithms that adapt to your preferences and provide even more personalized learning suggestions.</p>
+            </div>
           </div>
-          <div>
-            <div class="mt-10">
-              <!-- Decorative image grid -->
-              <div aria-hidden="true" class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
-                <div class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-                  <div class="flex items-center space-x-6 lg:space-x-8">
-                    <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                      <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
-                        <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg" alt="" class="h-full w-full object-cover object-center" />
-                      </div>
-                      <div class="h-64 w-44 overflow-hidden rounded-lg">
-                        <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg" alt="" class="h-full w-full object-cover object-center" />
-                      </div>
-                    </div>
-                    <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                      <div class="h-64 w-44 overflow-hidden rounded-lg">
-                        <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg" alt="" class="h-full w-full object-cover object-center" />
-                      </div>
-                      <div class="h-64 w-44 overflow-hidden rounded-lg">
-                        <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg" alt="" class="h-full w-full object-cover object-center" />
-                      </div>
-                      <div class="h-64 w-44 overflow-hidden rounded-lg">
-                        <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg" alt="" class="h-full w-full object-cover object-center" />
-                      </div>
-                    </div>
-                    <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                      <div class="h-64 w-44 overflow-hidden rounded-lg">
-                        <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg" alt="" class="h-full w-full object-cover object-center" />
-                      </div>
-                      <div class="h-64 w-44 overflow-hidden rounded-lg">
-                        <img src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg" alt="" class="h-full w-full object-cover object-center" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-  
-              <a href="#" class="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700">Shop Collection</a>
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center w-12 h-12 rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-bookmark-plus">
+                  <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+                  <line x1="12" x2="12" y1="7" y2="13"></line>
+                  <line x1="15" x2="9" y1="10" y2="10"></line>
+                </svg></div>
+            </div>
+            <div class="ml-4">
+              <h4 class="text-lg font-medium leadi ">Interactive Learning Resources</h4>
+              <p class="mt-2 ">Access an extensive library of interactive resources that make your learning journey engaging and interactive.</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center w-12 h-12 rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-video">
+                  <path d="m22 8-6 4 6 4V8Z"></path>
+                  <rect width="14" height="12" x="2" y="6" rx="2" ry="2"></rect>
+                </svg></div>
+            </div>
+            <div class="ml-4">
+              <h4 class="text-lg font-medium leadi ">Enhanced Video Streaming</h4>
+              <p class="mt-2 ">Experience seamless video integration with enhanced streaming capabilities, providing a better and more uninterrupted learning experience.</p>
+            </div>
+          </div>
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <div class="flex items-center justify-center w-12 h-12 rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-file-question">
+                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                  <path d="M10 10.3c.2-.4.5-.8.9-1a2.1 2.1 0 0 1 2.6.4c.3.4.5.8.5 1.3 0 1.3-2 2-2 2"></path>
+                  <path d="M12 17h.01"></path>
+                </svg></div>
+            </div>
+            <div class="ml-4">
+              <h4 class="text-lg font-medium leadi ">Advanced Quiz Generation </h4>
+              <p class="mt-2 ">Take your knowledge testing to the next level with advanced quiz generation, providing more customization options for your quizzes.</p>
             </div>
           </div>
         </div>
       </div>
+      <div aria-hidden="true" class="mt-10 lg:mt-0">
+        <img width="600" height="600" src="https://images.unsplash.com/photo-1516542076529-1ea3854896f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxNHx8Y29tcHV0ZXJ8ZW58MHwwfHx8MTY5OTE3MDk1N3ww&ixlib=rb-4.0.3&q=80&w=1080" class="mx-auto rounded-lg shadow-lg dark-bg-gray-500" style="color:transparent">
+      </div>
     </div>
+  </div>
+</section>
+
   </template>
   

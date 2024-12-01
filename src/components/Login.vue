@@ -9,7 +9,7 @@ const props = defineProps<{
 
 // 声明 emit 事件
 const emit = defineEmits<{
-    (event: 'set_showModal', value: boolean): void;
+    (event: 'update:showModal', value: boolean): void;
 }>();
 
 // 控制模态框显示状态的响应式变量
@@ -22,12 +22,12 @@ watch(() => props.showModal, (newValue) => {
 
 // 监听 localShowModal 的变化并通知父组件
 watch(localShowModal, (newValue) => {
-    emit('set_showModal', newValue);
+    emit('update:showModal', newValue);
 });
 
 // 在模态框关闭动画完成后触发事件
 const handleAfterLeave = () => {
-    localShowModal.value = false; // 触发 watcher 来同步更新父组件
+    localShowModal.value = false; 
 };
 </script>
 

@@ -4,7 +4,6 @@ import { RouterView } from 'vue-router'
 import { NModalProvider } from 'naive-ui';
 
 import HeaderView from '@/components/Header.vue';
-import LeftSide from '@/components/LeftSide.vue';
 import FooterView from '@/components/Footer.vue';
 
 </script>
