@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { reactive } from 'vue';
 import ChatMessage from '@/components/ChatMessage.vue';
+
+import { useUserStore } from '@/stores/user';
+
+// 使用 Pinia Store
+const userStore = useUserStore();
 
 const messages = ref([
   { type: "service", message: "您好，有什麼可以幫你服務嗎?" },
@@ -25,6 +31,33 @@ const submitMessage = () => {
     userInput.value = ""; // 清空输入框
   }
 };
+
+
+// 创建本地状态来绑定输入框的值
+const user = reactive({
+  id: '111',
+  name: '222',
+  bu: '333',
+});
+
+
+
+const handleLogin = () => {
+  // 调用 userStore 的 login 方法，并传入符合结构的对象
+  userStore.login({
+    id: user.id,
+    name: user.name,
+    bu: user.bu,
+  });
+};
+
+
+handleLogin();
+
+//取用
+const userId = userStore.id;
+
+alert(userId);
 
 </script>
 
